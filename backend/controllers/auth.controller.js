@@ -108,7 +108,7 @@ export const signin = async (req, res, next) => {
     res
       .cookie('access_token', token, { 
         httpOnly: true,
-        maxAge: 5 * 60 * 1000 // 5 minutes in milliseconds
+        // maxAge: 5 * 60 * 1000 // 5 minutes in milliseconds
       })
       .status(200)
       .json(rest);
@@ -127,7 +127,7 @@ export const google = async (req, res, next) => {
       res
         .cookie('access_token', token, { 
           httpOnly: true,
-          maxAge: 5 * 60 * 1000 // 5 minutes in milliseconds
+          // maxAge: 5 * 60 * 1000 // 5 minutes in milliseconds
         })
         .status(200)
         .json(rest);
@@ -150,7 +150,7 @@ export const google = async (req, res, next) => {
       res
         .cookie('access_token', token, { 
           httpOnly: true,
-          maxAge: 5 * 60 * 1000 // 5 minutes in milliseconds
+          // maxAge: 5 * 60 * 1000 // 5 minutes in milliseconds
         })
         .status(200)
         .json(rest);
