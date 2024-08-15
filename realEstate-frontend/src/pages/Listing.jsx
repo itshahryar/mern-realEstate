@@ -26,6 +26,7 @@ export default function Listing() {
   const [copied, setCopied] = useState(false);
   const [contact, setContact] = useState(false);
   const params = useParams();
+  //User Data: The currentUser is obtained from the Redux store using useSelector.
   const { currentUser } = useSelector((state) => state.user);
 
   useEffect(() => {
@@ -75,7 +76,10 @@ export default function Listing() {
             <FaShare
               className='text-slate-500'
               onClick={() => {
+                //This line copies the current URL of the page to the clipboard.
                 navigator.clipboard.writeText(window.location.href);
+                // This sets the copied state to true, which triggers a visual indication that the link
+                //has been successfully copied (e.g., a message "Link copied!" might be shown).
                 setCopied(true);
                 setTimeout(() => {
                   setCopied(false);
