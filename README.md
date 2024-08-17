@@ -1,14 +1,49 @@
-In Front-end Create A .env file:
+# SherryEstate Real Estate Application
 
-VITE_FIREBASE_API_KEY= "your firebase api key" to deal with images uploading and sign-in with google
+Welcome to **SherryEstate**, a comprehensive real estate application that simplifies the process of buying, selling, and renting properties. With an intuitive interface, powerful search functionality, and seamless integration with Firebase and MongoDB, SherryEstate is your go-to platform for all your real estate needs.
 
-In Back-end Create A .env file:
+## Features
 
-MONGO ="your mongodb url here"
-JWT_SECRET= your jwt secret key here
+- 🏡 **Property Listings**: Browse a wide range of property listings with detailed information.
+- 🔍 **Search Functionality**: Use advanced search filters to find properties that match your criteria.
+- 🛠 **Create and Manage Listings**: Easily create, update, and manage your property listings.
+- 👤 **User Profiles**: View and update your profile information and manage your listings.
+- 🔒 **Authentication**: Secure sign-up and sign-in with email and Google integration.
+- 🌐 **Responsive Design**: Tailwind CSS ensures a sleek and responsive UI across all devices.
+
+## Technologies Used
+
+- **Frontend**: React, Redux, Tailwind CSS, Vite
+- **Backend**: Node.js, Express, MongoDB
+- **Authentication & Storage**: Firebase for Google sign-in and image uploads
+- **State Management**: Redux for managing application state
+- **Styling**: Tailwind CSS for modern, responsive design
+  
+Install the required dependencies:
+npm install
+
+Create a .env file in the frontend directory and add your Firebase API key:
+VITE_FIREBASE_API_KEY="your firebase api key"
+
+Start the development server:
+npm run dev
+
+Backend Setup
+Navigate to the backend directory:
+cd ../backend
+
+Install the required dependencies:
+npm install
+
+Create a .env file in the backend directory and add the following environment variables:
+MONGO="your mongodb url here"
+JWT_SECRET="your jwt secret key here"
+
+Start the backend server:
+npm run start
 
 
-IMAGES:
+SCREENSHOTS IMAGES:
 Home------------------------
 ![Home 1](https://github.com/user-attachments/assets/8e63e76a-7062-4ced-983f-a365c56ef380)
 ![Home 2](https://github.com/user-attachments/assets/29077e00-a7c1-4c95-8133-e34f17759a2a)
