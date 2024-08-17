@@ -1,3 +1,9 @@
+In Front-end Create A .env file:
+VITE_FIREBASE_API_KEY= "your firebase api key" to deal with images uploading and sign-in with google
+In Back-end Create A .env file:
+MONGO ="your mongodb url here"
+JWT_SECRET= your jwt secret key here
+
 IMAGES:
 Home------------------------
 ![Home 1](https://github.com/user-attachments/assets/8e63e76a-7062-4ced-983f-a365c56ef380)
