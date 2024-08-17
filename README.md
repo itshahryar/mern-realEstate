@@ -20,27 +20,27 @@ Welcome to **SherryEstate**, a comprehensive real estate application that simpli
 - **Styling**: Tailwind CSS for modern, responsive design
   
 Install the required dependencies:
-npm install
+- npm install
 
 Create a .env file in the frontend directory and add your Firebase API key:
-VITE_FIREBASE_API_KEY="your firebase api key"
+- VITE_FIREBASE_API_KEY="your firebase api key"
 
 Start the development server:
-npm run dev
+- npm run dev
 
 Backend Setup
 Navigate to the backend directory:
-cd ../backend
+- cd ../backend
 
 Install the required dependencies:
-npm install
+- npm install
 
 Create a .env file in the backend directory and add the following environment variables:
-MONGO="your mongodb url here"
-JWT_SECRET="your jwt secret key here"
+- MONGO="your mongodb url here"
+- JWT_SECRET="your jwt secret key here"
 
 Start the backend server:
-npm run start
+- npm run start
 
 
 SCREENSHOTS IMAGES:
