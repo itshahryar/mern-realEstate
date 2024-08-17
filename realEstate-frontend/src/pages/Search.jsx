@@ -90,18 +90,42 @@ export default function Search() {
           e.target.checked || e.target.checked === 'true' ? true : false,
       });
     }
+    // SORT
+    // The sort variable represents the criteria or field that you want to sort the listings by. For example, created_at for sorting by creation date, or regularPrice for sorting by price.
+
+    // Order
+    // "Order" specifies the direction in which you want the sorting to happen. There are typically two types of orders:
+    // Ascending (asc): Sorts the data from smallest to largest (e.g., A-Z for text, 1-10 for numbers).
+    // Descending (desc): Sorts the data from largest to smallest (e.g., Z-A for text, 10-1 for numbers).
+
+    // USE:
+    // Example of Practical Use:
+    
+    // Scenario 1: User wants to see the latest properties first.
+    // User selects "Latest" from the dropdown, which corresponds to sort='createdAt' and order='desc'.
+    // The listings are displayed starting from the most recently added to the oldest.
+
+    // Scenario 2: User wants to find the cheapest properties.
+    // User selects "Price low to high" from the dropdown, which corresponds to sort='regularPrice' and order='asc'.
+    // The listings are displayed starting from the lowest price to the highest.
+
 
     if (e.target.id === 'sort_order') {
+      // You're using a dropdown menu to allow users to select how they want the search results to be sorted.
+      // The split('_') method divides the selected value from the dropdown into two parts:
+      // Before the underscore (_): This is the sort criteria (e.g., created_at or regularPrice).
+      // After the underscore (_): This is the order (e.g., desc for descending, asc for ascending).
       const sort = e.target.value.split('_')[0] || 'created_at';
-
+      // The first part ([0]) becomes the sort criteria: sort = 'regularPrice'.
       const order = e.target.value.split('_')[1] || 'desc';
-
+      // The second part ([1]) becomes the order: order = 'asc'.
       setSidebardata({ ...sidebardata, sort, order });
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Creates a new instance of URLSearchParams, which allows you to easily construct a URL query string.
     const urlParams = new URLSearchParams();
     urlParams.set('searchTerm', sidebardata.searchTerm);
     urlParams.set('type', sidebardata.type);
@@ -110,13 +134,14 @@ export default function Search() {
     urlParams.set('offer', sidebardata.offer);
     urlParams.set('sort', sidebardata.sort);
     urlParams.set('order', sidebardata.order);
+    // Converts the URLSearchParams object to a string, which represents the entire query string (e.g., "searchTerm=house&type=sale&parking=true&...").
     const searchQuery = urlParams.toString();
     navigate(`/search?${searchQuery}`);
   };
 
   const onShowMoreClick = async () => {
     const numberOfListings = listings.length;
-    const startIndex = numberOfListings;
+    const startIndex = numberOfListings; // start from end e.g 9 from above
     const urlParams = new URLSearchParams(location.search);
     urlParams.set('startIndex', startIndex);
     const searchQuery = urlParams.toString();
@@ -162,7 +187,10 @@ export default function Search() {
                 id='rent'
                 className='w-5'
                 onChange={handleChange}
-                checked={sidebardata.type === 'rent'}
+                checked={sidebardata.type === 'rent'} // checks a condition // only have one value
+                //This is used when you have multiple checkboxes for mutually exclusive options
+                //(like 'Rent', 'Sale', and 'All'). Here, the sidebardata.type can only have one value at a time
+                //('rent', 'sale', or 'all').
               />
               <span>Rent</span>
             </div>
@@ -182,7 +210,7 @@ export default function Search() {
                 id='offer'
                 className='w-5'
                 onChange={handleChange}
-                checked={sidebardata.offer}
+                checked={sidebardata.offer} // directly uses a boolean value
               />
               <span>Offer</span>
             </div>
