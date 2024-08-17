@@ -18,7 +18,8 @@ Welcome to **SherryEstate**, a comprehensive real estate application that simpli
 - **Authentication & Storage**: Firebase for Google sign-in and image uploads
 - **State Management**: Redux for managing application state
 - **Styling**: Tailwind CSS for modern, responsive design
-  
+
+## Front-end Setup
 Install the required dependencies:
 - npm install
 
@@ -28,7 +29,7 @@ Create a .env file in the frontend directory and add your Firebase API key:
 Start the development server:
 - npm run dev
 
-Backend Setup
+## Backend Setup
 Navigate to the backend directory:
 - cd ../backend
 
@@ -43,7 +44,7 @@ Start the backend server:
 - npm run start
 
 
-SCREENSHOTS IMAGES:
+## SCREENSHOTS IMAGES:
 Home------------------------
 ![Home 1](https://github.com/user-attachments/assets/8e63e76a-7062-4ced-983f-a365c56ef380)
 ![Home 2](https://github.com/user-attachments/assets/29077e00-a7c1-4c95-8133-e34f17759a2a)
